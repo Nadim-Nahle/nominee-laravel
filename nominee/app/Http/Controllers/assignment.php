@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class assignment extends Controller
 {
@@ -12,6 +13,7 @@ class assignment extends Controller
          $pal = 'hello';
     }
 
+    // time controller
     public function time(){
         $date1 = "1732-04-15 18:00:00";
         $date2 = "2022-06-06 18:00:00";
@@ -26,6 +28,11 @@ class assignment extends Controller
         echo $difference; 
     
     }
+    // text controller
+    public function text(){
+        $response = Http::get('https://icanhazdadjoke.com/slack');
+        echo $response.'text';
+   }
 
     
 }
