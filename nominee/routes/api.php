@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-use App\Http\Controllers\palindrome;
+use App\Http\Controllers\assignment;
 
 
-route::get('/', [palindrome::class, 'sayHi'])->name("say-hi");
+route::get('/', [assignment::class, 'sayHi'])->name("say-hi");
 
 
 
