@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\assignment;
 
 
-route::get('/', [assignment::class, 'sayHi'])->name("say-hi");
+route::get('/', [assignment::class, 'palindrome'])->name("palindrome");
+route::get('time', [assignment::class, 'time'])->name("time");
 
 
 
