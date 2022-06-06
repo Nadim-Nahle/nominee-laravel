@@ -9,8 +9,29 @@ class assignment extends Controller
 {
     
 
-    public function Palindrome(){
-         $pal = 'hello';
+    public function Palindrome($number){
+        $original = 1441;
+        $temp = $number; 
+        $new = 0; 
+        while (floor($temp)) { 
+            $d = $temp % 10; 
+            $new = $new * 10 + $d; 
+            $temp = $temp/10; 
+        } 
+        if ($new == $number){ 
+            return 1; 
+        }
+        else{
+            return 0;
+        }
+    } 
+     
+    if (Palindrome($original)){ 
+        echo "Palindrome"; 
+    }
+    else { 
+    echo "Not a Palindrome"; 
+    }
     }
 
     // time controller
@@ -30,14 +51,14 @@ class assignment extends Controller
     }
     // text controller
     public function text(){
-        $response = Http::get('https://icanhazdadjoke.com/slack');
-        echo $response.'text';
+        $message = json_decode(file_get_contents('https://icanhazdadjoke.com/slack'), true)["attachments"][0]["text"];
+        echo($message);
    }
 
    public function beer(){
        
-    $response = Http::get('https://api.punkapi.com/v2/beers');
-    $new= json_encode($response);
+    $message = (file_get_contents('https://api.punkapi.com/v2/beers'));
+    echo($message);
     
     
 }
@@ -56,7 +77,7 @@ class assignment extends Controller
 }
 public function nominee(){
     $myArray = ['hadi','sara','nadim','charbel'];
-       
+
     $randomNumber = rand(0,3);
     
     echo $myArray[$randomNumber];
