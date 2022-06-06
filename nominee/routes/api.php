@@ -22,6 +22,7 @@ route::get('text', [assignment::class, 'text'])->name("text");
 route::get('beer', [assignment::class, 'beer'])->name("beer");
 route::get('beer', [assignment::class, 'beer'])->name("beer");
 route::get('students', [assignment::class, 'students'])->name("students");
+route::get('nominee', [assignment::class, 'nominee'])->name("nominee");
 
 
 

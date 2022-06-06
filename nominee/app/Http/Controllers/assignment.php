@@ -46,9 +46,21 @@ class assignment extends Controller
     $myArray = ['hadi','sara','nadim','charbel'];
     
     echo $myArray[0];
-
+    echo ' ';
+    echo $myArray[3];
+    echo '<br>';
+    echo $myArray[1];
+    echo ' ';
+    echo $myArray[2];
+   
+}
+public function nominee(){
+    $myArray = ['hadi','sara','nadim','charbel'];
+       
+    $randomNumber = rand(0,3);
     
-    
+    echo $myArray[$randomNumber];
+   
 }
 
     
