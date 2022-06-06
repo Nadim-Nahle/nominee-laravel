@@ -19,6 +19,9 @@ use App\Http\Controllers\assignment;
 route::get('/', [assignment::class, 'palindrome'])->name("palindrome");
 route::get('time', [assignment::class, 'time'])->name("time");
 route::get('text', [assignment::class, 'text'])->name("text");
+route::get('beer', [assignment::class, 'beer'])->name("beer");
+route::get('beer', [assignment::class, 'beer'])->name("beer");
+route::get('students', [assignment::class, 'students'])->name("students");
 
 
 

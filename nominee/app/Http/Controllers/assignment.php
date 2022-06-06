@@ -34,5 +34,22 @@ class assignment extends Controller
         echo $response.'text';
    }
 
+   public function beer(){
+       
+    $response = Http::get('https://api.punkapi.com/v2/beers');
+    $new= json_encode($response);
+    
+    
+}
+   public function students(){
+       
+    $myArray = ['hadi','sara','nadim','charbel'];
+    
+    echo $myArray[0];
+
+    
+    
+}
+
     
 }
